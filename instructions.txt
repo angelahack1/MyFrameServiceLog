@@ -1,0 +1,10 @@
+docker build -t <your-docker-image> .
+
+docker push <your-docker-image>
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+kubectl get deployments
+kubectl get services
+
