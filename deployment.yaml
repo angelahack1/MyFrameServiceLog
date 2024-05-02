@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app
+  name: myframeservice-app
   labels:
-    app: nodejs
+    app: myframeservice
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nodejs
+      app: myframeservice
   template:
     metadata:
       labels:
-        app: nodejs
+        app: myframeservice
     spec:
       containers:
-      - name: nodejs
-        image: <your-docker-image>
+      - name: myframeservice
+        image: angelakimichellle/myframeservice:1.1
         ports:
         - containerPort: 8080
