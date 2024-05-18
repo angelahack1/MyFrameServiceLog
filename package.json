@@ -26,6 +26,9 @@
   },
   "homepage": "https://github.com/angelahack1/MyFrameServiceLog#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0"
   }
 }
