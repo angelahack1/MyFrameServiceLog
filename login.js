@@ -10,7 +10,7 @@ const app = express();
 
 // Simple access control mechanism
 app.use(basicAuth({
-    users: { 'angelahack1': '1164Loud' }, // Replace with your desired username and password
+    users: { 'angelahack1': 'myPassHacked' }, // Replace with your desired username and password
     challenge: true
 }))
 
