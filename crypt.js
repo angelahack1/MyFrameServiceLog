@@ -1,19 +1,24 @@
-const crypto = require('crypto');
+const forge = require('node-forge');
 const fs = require('fs');
 
 // Read the private key
-const privateKey = fs.readFileSync('./key.pem', 'utf8');
+const pem = fs.readFileSync('./cert.pem', 'utf8');
+const certificate = forge.pki.certificateFromPem(pem);
+const publicKey = certificate.publicKey;
 
 // Data to be encrypted
-const data = "Hello, World!";
+const data = "Hello, Angy's World!!!";
 
-// Create a buffer from the data
+// Convert data to buffer
 const buffer = Buffer.from(data, 'utf8');
 
-// Create a cipher object
-const cipher = crypto.publicEncrypt(privateKey, buffer);
+// Convert buffer to forge buffer
+const forgeBuffer = forge.util.createBuffer(buffer.toString('binary'));
 
-// The encrypted data is in the form of a Buffer, convert it to a string
-const encryptedData = cipher.toString('base64');
+// Encrypt data
+const encrypted = publicKey.encrypt(forgeBuffer.getBytes(), 'RSA-OAEP');
 
-console.log(encryptedData);
+// Convert encrypted data to base64
+const encryptedBase64 = forge.util.encode64(encrypted);
+
+console.log(encryptedBase64);
