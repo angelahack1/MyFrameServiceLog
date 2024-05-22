@@ -15,7 +15,7 @@ app.use(basicAuth({
 }))
 
 app.get('/', (req, res) => {
-    res.send("Hello, secure Angy's Wortld!!!!");
+    res.send("Hello, secure Angy's World!!!!");
 });
 
 // SSL/TLS certificate and key
