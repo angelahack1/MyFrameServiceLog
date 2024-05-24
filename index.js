@@ -2,6 +2,7 @@ const express = require('express');
 const https = require('https');
 const fs = require('fs');
 const basicAuth = require('express-basic-auth')
+const addon = require('./build/Release/addon');
 
 const portNumber = 443;
 
@@ -16,7 +17,7 @@ app.use(basicAuth({
 }));
 
 app.get('/', (req, res) => {
-    res.send("Hello, secure Angy's World!!!!");
+    res.send("Hello, secure Angy's World!!!!, el resultado del computo es: "+ addon.add(3, 5));
 });
 
 app.get('/items', (req, res) => {
