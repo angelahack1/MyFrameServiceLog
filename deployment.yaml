@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: myframeservice
-        image: angelakimichellle/myframeservice:1.1
+        image: angelakimichellle/myframeservice:1.4
         ports:
-        - containerPort: 8080
+        - containerPort: 443
         resources:
           limits:
             cpu: "2"
