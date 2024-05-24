@@ -74,6 +74,17 @@
     "v8_use_snapshot": 1,
     "want_separate_host_toolset": 0,
     "nodedir": "/usr/include/nodejs",
-    "standalone_static_library": 1
+    "standalone_static_library": 1,
+    "user_agent": "npm/8.5.1 node/v12.22.9 linux x64 workspaces/false",
+    "userconfig": "/home/angelahack1/.npmrc",
+    "local_prefix": "/home/angelahack1/MyFrameServiceLog",
+    "metrics_registry": "https://registry.npmjs.org/",
+    "prefix": "/usr/local",
+    "cache": "/home/angelahack1/.npm",
+    "node_gyp": "/usr/share/nodejs/node-gyp/bin/node-gyp.js",
+    "globalconfig": "/etc/npmrc",
+    "init_module": "/home/angelahack1/.npm-init.js",
+    "globalignorefile": "/etc/npmignore",
+    "global_prefix": "/usr/local"
   }
 }
