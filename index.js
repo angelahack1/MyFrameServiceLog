@@ -43,8 +43,8 @@ app.delete('/items/:id', (req, res) => {
 
 // SSL/TLS certificate and key
 const options = {
-    key: fs.readFileSync('./key2.pem'), // Path to your key file
-    cert: fs.readFileSync('./cert2.pem') // Path to your certificate file
+    key: fs.readFileSync('./key.pem'), // Path to your key file
+    cert: fs.readFileSync('./cert.pem') // Path to your certificate file
 };
 
 https.createServer(options, app).listen(portNumber, () => {

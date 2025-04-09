@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 
 RUN mkdir -p /app
@@ -27,7 +27,6 @@ RUN npm install
 
 # Install libnode in order to run node-gyp addons...
 RUN apt install -y libnode-dev
-RUN apt install -y libnode72
 
 # Install node-gyp
 RUN npm install -g node-gyp

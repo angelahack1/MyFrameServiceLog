@@ -7,8 +7,6 @@
     "test": "node index.js",
     "start": "node index.js",
     "start_sudoed": "sudo node index.js",
-    "login": "node login.js",
-    "crypt": "node crypt.js",
     "node-gyp-configure": "node-gyp configure",
     "node-gyp-build": "node-gyp build"
   },
